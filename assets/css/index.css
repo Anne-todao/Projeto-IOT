@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2e9e9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.app-container {
+    width: 800px;
+    max-width: 95%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(186, 34, 34, 0.12);
+}
+
+header {
+    background: linear-gradient(135deg, #e62e2e 0%, #b30000 100%);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(179, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+header h3 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+.tittle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav {
+    border-bottom: 1px solid #f0e6e6;
+    text-align: center;
+    padding: 12px 0;
+    background-color: #faf7f7;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 8px 24px;
+    text-decoration: none;
+    color: #cc2929;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    border: 1.5px solid #ffcccc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #cc2929;
+    color: #ffffff;
+    border-color: #cc2929;
+    box-shadow: 0 4px 10px rgba(204, 41, 41, 0.2);
+}
+
+main {
+    padding: 28px;
+    flex: 1;
+}
+
+main h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #801a1a;
+    text-align: center;
+    background-color: #fde8e8;
+    padding: 6px 20px;
+    width: fit-content;
+    margin: 0 auto 20px auto;
+    border-radius: 20px;
+}
+
+main p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.cards {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    perspective: 1000px;
+}
+
+.cards-front, .cards-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.cards-front {
+    transform: rotateY(0deg);
+    background-color: #f8f8f8;
+}
+
+.cards-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cards-back {
+    background: linear-gradient(135deg, #c94444 0%, #a32a2a 100%);
+    color: #ffffff;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.cards-back h1 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    margin-right: 0;
+    text-align: center;
+}
+
+.cards-back p {
+    color: #f0e6e6;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center;
+}
+
+.cards:hover .cards-front {
+    transform: rotateY(-180deg);
+}
+
+.cards:hover .cards-back {
+    transform: rotateY(0deg);
+}
+
+footer {
+    padding: 18px 20px;
+    font-size: 0.85rem;
+    color: #777777;
+    border-top: 1px solid #f0e6e6;
+    text-align: center;
+    background-color: #faf7f7;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.col {
+  flex: 1 1 300px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}

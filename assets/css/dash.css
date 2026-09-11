@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2e9e9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    min-height: auto;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(186, 34, 34, 0.12);
+}
+
+header {
+    background: linear-gradient(135deg, #e62e2e 0%, #b30000 100%);
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(179, 0, 0, 0.15);
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+header h3 {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.85;
+}
+
+.tittle {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.nav {
+    border-bottom: 1px solid #f0e6e6;
+    text-align: center;
+    padding: 12px 15px;
+    background-color: #faf7f7;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 8px 24px;
+    text-decoration: none;
+    color: #cc2929;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background-color: #ffffff;
+    border: 1.5px solid #ffcccc;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #cc2929;
+    color: #ffffff;
+    border-color: #cc2929;
+    box-shadow: 0 4px 10px rgba(204, 41, 41, 0.2);
+}
+
+main {
+    padding: 35px 28px 45px 28px;
+    flex: 1;
+}
+
+main h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #801a1a;
+    text-align: center;
+    background-color: #fde8e8;
+    padding: 6px 20px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 15px auto;
+    border-radius: 20px;
+}
+
+#status {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 35px auto;
+    padding: 6px 22px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-align: center;
+    background-color: #fde8e8;
+    color: #c94444;
+    border: 1px solid #ffcccc;
+    transition: all 0.3s ease;
+}
+
+#status.connected {
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 1px solid #ceedd5;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #faf7f7;
+    border: 1px solid #f0e6e6;
+    border-radius: 12px;
+    padding: 24px 12px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(186, 34, 34, 0.15);
+    border-color: #ffcccc;
+}
+
+.card h3 {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 16px;
+    font-weight: 600;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.value {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 4px;
+    background: linear-gradient(135deg, #c94444 0%, #a32a2a 100%);
+    color: #ffffff;
+    padding: 18px 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(163, 42, 42, 0.2);
+}
+
+.value span:first-child {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.value span:last-child {
+    font-size: 0.95rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+footer {
+    padding: 18px 20px;
+    font-size: 0.85rem;
+    color: #777777;
+    border-top: 1px solid #f0e6e6;
+    text-align: center;
+    background-color: #faf7f7;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .app-container {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    header {
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    main {
+        padding: 20px 15px 30px 15px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .value span:first-child {
+        font-size: 1.5rem;
+    }
+}
