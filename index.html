@@ -95,12 +95,36 @@
                 </div>
             </main>
 
-            <footer>
-                <p>
-                    &copy; Desenvolvido por Anna Laura, Anne Gabrielly, Gabrielly, Helloysa e Davi
-                    de Souza. 2026
-                </p>
+            <footer class="global-footer">
+    <p id="lista-integrantes">Desenvolvido por: </p>
             </footer>
         </div>
+
+        <script src="assets/js/index.js"></script>
     </body>
+    <script>
+    (function () {
+  const INTEGRANTES_REAIS = ["Anna Laura", "Anne Todão", "Gabrielly Dias", "Helloysa Santos"];
+
+  function inicializarIntegrantes() {
+    // Sobrescreve o LocalStorage com a lista atualizada de nomes reais
+    localStorage.setItem("integrantesGrupo", JSON.stringify(INTEGRANTES_REAIS));
+
+    // Lê do LocalStorage
+    const salvos = JSON.parse(localStorage.getItem("integrantesGrupo"));
+    const el = document.getElementById("lista-integrantes");
+
+    // Injeta na tela
+    if (el) {
+      el.innerText = "© Desenvolvido por: " + salvos.join(" | ");
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", inicializarIntegrantes);
+  } else {
+    inicializarIntegrantes();
+  }
+})();
+    </script>
 </html>

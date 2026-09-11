@@ -56,3 +56,5 @@ function onMessageArrived(message) {
         document.getElementById('gas').textContent = payload;
     }
 }
+
+

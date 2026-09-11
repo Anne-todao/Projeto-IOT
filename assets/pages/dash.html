@@ -1,71 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
-    <title>Projeto IOT - Cyber Dashboard</title>
-    <link rel="stylesheet" href="../css/dash.css">
-</head>
-<body>
-    <div class="app-container">
-        <header>
-            <div class="header-content">
-                <h1>PROJETO <span>IOT</span></h1>
-                <h2>HAGMA | 2TDS2_SEDUC</h2>
-            </div>
-
-        </header>
- <div class="nav">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js"
+            type="text/javascript"></script>
+        <title>Projeto IOT - Cyber Dashboard</title>
+        <link rel="stylesheet" href="../css/dash.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <header>
+                <div class="header-content">
+                    <h1>
+                        PROJETO
+                        <span>IOT</span>
+                    </h1>
+                    <h2>HAGMA | 2TDS2_SEDUC</h2>
+                </div>
+            </header>
+            <div class="nav">
                 <a href="../../index.html" class="btn-home">INÍCIO</a>
             </div>
-        <main>
-            <div class="title-bar">
-                <h2>GERENCIADOR CLIMÁTICO</h2>
-                <div id="status" class="status-badge disconnected">DESCONECTADO</div>
-            </div>
+            <main>
+                <div class="title-bar">
+                    <h2>GERENCIADOR CLIMÁTICO</h2>
+                    <div id="status" class="status-badge disconnected">DESCONECTADO</div>
+                </div>
 
-            <div class="card-container">
-                <div class="card temp-card">
-                    <div class="card-glow"></div>
-                    <h3>Temperatura</h3>
-                    <div class="ring">
-                        <div class="value">
-                            <span id="temp">--</span>
-                            <small>°C</small>
+                <div class="card-container">
+                    <div class="card temp-card">
+                        <div class="card-glow"></div>
+                        <h3>Temperatura</h3>
+                        <div class="ring">
+                            <div class="value">
+                                <span id="temp">--</span>
+                                <small>°C</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card umi-card">
+                        <div class="card-glow"></div>
+                        <h3>Umidade</h3>
+                        <div class="ring">
+                            <div class="value">
+                                <span id="umi">--</span>
+                                <small>%</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card gas-card">
+                        <div class="card-glow"></div>
+                        <h3>Qualidade do Ar</h3>
+                        <div class="ring">
+                            <div class="value">
+                                <span id="gas">--</span>
+                                <small>PPM</small>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </main>
 
-                <div class="card umi-card">
-                    <div class="card-glow"></div>
-                    <h3>Umidade</h3>
-                    <div class="ring">
-                        <div class="value">
-                            <span id="umi">--</span>
-                            <small>%</small>
-                        </div>
-                    </div>
-                </div>
+            <footer class="global-footer">
+                <p id="lista-integrantes">Carregando integrantes...</p>
+            </footer>
+        </div>
 
-                <div class="card gas-card">
-                    <div class="card-glow"></div>
-                    <h3>Qualidade do Ar</h3>
-                    <div class="ring">
-                        <div class="value">
-                            <span id="gas">--</span>
-                            <small>PPM</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-
-        <footer>
-            <p>&copy; Desenvolvido por Anna Laura, Anne Gabrielly, Gabrielly, Helloysa e Davi de Souza. 2026</p>
-        </footer>
-    </div>
-
-    <script src="../js/index.js"></script>
-</body>
+        <script src="../js/index.js"></script>
+    </body>
 </html>
